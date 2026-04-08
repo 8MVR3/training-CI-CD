@@ -7,7 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - run: docker --version
       - run: docker run alpine cat /etc/os-release
       - run: docker run alpine echo "Alpine OK"
-      - run: docker build -t mlops-training .
+      - name: Build image
+        run: docker build -t mlops-training .
