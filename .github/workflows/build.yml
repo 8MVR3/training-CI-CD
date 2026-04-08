@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: docker --version
-      - run: docker run alpine cat /etc/alpine/release
+      - run: docker run alpine cat /etc/os-release
+      - run: docker run alpine echo "Alpine OK"
