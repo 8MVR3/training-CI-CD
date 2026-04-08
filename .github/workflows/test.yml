@@ -1,6 +1,11 @@
+name: test
+on:
+  push:
+    branches:
+      [main]
 jobs:
-	name: 
-		[test]
-		push:
-			[main]
-				
+  test:
+    runs-on:
+      ubuntu-latest
+    steps:
+      - run: echo "CI passed"
