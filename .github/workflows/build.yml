@@ -1,0 +1,11 @@
+name: Build Docker
+  on:
+    push:
+      branches:
+        - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  steps:
+    - run: docker --version
+    - run: docker run alpine cat /etc/alpine/release
